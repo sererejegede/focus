@@ -30,6 +30,7 @@ export const useTimer = (interval = 1000) => {
   }
 
   const countdown = (duration: number, callback: () => void) => {
+    time.value = duration
     timer = setInterval(() => {
       time.value = duration--
       if (time.value < 1) {
