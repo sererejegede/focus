@@ -1,4 +1,4 @@
-export const useRandomNumbers = (max = 20) => {
+export const randomNumbers = (max = 20) => {
   function random() {
     return Math.floor(Math.random() * (max - 1) + 1)
   }
