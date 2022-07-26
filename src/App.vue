@@ -43,7 +43,9 @@
                     bestTime.pretty
                   }}</span>
                 </p>
-                <p class="font-light text-base block">Can to beat this time?</p>
+                <p class="font-light text-base block">
+                  Can you beat this time?
+                </p>
               </div>
               <p v-show="state === 'abandoned'" class="dark:text-white mb-2">
                 Try again?
