@@ -9,7 +9,10 @@ module.exports = {
           200: '#d7dbf6',
           500: '#5F6EDD',
         },
-        secondary: '#c34d10',
+        secondary: {
+          300: '#e4ad91',
+          500: '#c34d10',
+        },
         white: '#f9f9fd',
       },
       fontFamily: {

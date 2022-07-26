@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/canvas-confetti': ^1.4.3
   '@typescript-eslint/eslint-plugin': ^5.4.0
   '@typescript-eslint/parser': ^5.4.0
   '@vue/cli-plugin-babel': ~5.0.0
@@ -10,6 +11,7 @@ specifiers:
   '@vue/cli-service': ~5.0.0
   '@vue/eslint-config-typescript': ^9.1.0
   autoprefixer: ^10.4.7
+  canvas-confetti: ^1.5.1
   core-js: ^3.8.3
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
@@ -28,12 +30,14 @@ specifiers:
   vue-svg-loader: ^0.17.0-beta.2
 
 dependencies:
+  canvas-confetti: 1.5.1
   core-js: 3.23.5
   register-service-worker: 1.7.2
   tailwindcss: 3.1.6
   vue: 3.2.37
 
 devDependencies:
+  '@types/canvas-confetti': 1.4.3
   '@typescript-eslint/eslint-plugin': 5.30.7_dde5965b5674e0237d4c51fb1086fdd4
   '@typescript-eslint/parser': 5.30.7_eslint@7.32.0+typescript@4.5.5
   '@vue/cli-plugin-babel': 5.0.8_d490e35fafdcbe72bda74b8b424628d1
@@ -1522,6 +1526,10 @@ packages:
       '@types/node': 18.0.6
     dev: true
 
+  /@types/canvas-confetti/1.4.3:
+    resolution: {integrity: sha512-UwFPTsW1ZwVyo/ETp4hPSikSD7yl2V42E3VWBF5P/0+DHO4iajyceWv7hfNdZ2AX5tkZnuViiBWOqyCPohU2FQ==}
+    dev: true
+
   /@types/connect-history-api-fallback/1.3.5:
     resolution: {integrity: sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw==}
     dependencies:
@@ -2978,6 +2986,10 @@ packages:
   /caniuse-lite/1.0.30001369:
     resolution: {integrity: sha512-OY1SBHaodJc4wflDIKnlkdqWzJZd1Ls/2zbVJHBSv3AT7vgOJ58yAhd2CN4d57l2kPJrgMb7P9+N1Mhy4tNSQA==}
     dev: true
+
+  /canvas-confetti/1.5.1:
+    resolution: {integrity: sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==}
+    dev: false
 
   /case-sensitive-paths-webpack-plugin/2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
