@@ -85,10 +85,11 @@ export const useTimer = (interval = 1000) => {
     }
     if (previousTimes.value.length === 5) previousTimes.value.pop()
     previousTimes.value.push(time.value.val)
+    previousTimes.value = previousTimes.value.sort((a, b) => a - b)
     localStorage.setItem('scores', JSON.stringify(previousTimes.value))
   }
   const bestTime = computed(() => {
-    const best = previousTimes.value.sort((a, b) => a - b)[0]
+    const best = previousTimes.value[0]
     return {
       pretty: best ? formatTime(best, true) : '',
       val: best,
@@ -103,6 +104,7 @@ export const useTimer = (interval = 1000) => {
     reset,
     stopped: computed(() => stopped.value),
     bestTime,
-    newRecord: computed(() => newRecord.value),
+    // newRecord: computed(() => newRecord.value),
+    newRecord,
   }
 }

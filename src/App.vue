@@ -3,7 +3,7 @@
     class="h-screen grid place-items-center dark:bg-slate-800 text-2xl px-4 overflow-hidden"
   >
     <div class="text-center mt-8 font-inter">
-      <h2 class="text-4xl text-secondary-500">Test your focus!</h2>
+      <h2 class="text-4xl text-secondary-500">Test your focus</h2>
       <p class="mt-4 dark:text-white text-lg">
         How fast can you spot the the
         <svg-icon name="check" class="inline" />
@@ -13,7 +13,7 @@
         <custom-transition mode="scale" speed="fast">
           <div
             v-if="['initialized', 'completed', 'abandoned'].includes(state)"
-            class="w-80 pt-64 grid place-items-center mx-auto"
+            class="w-80 pt-48 grid place-items-center mx-auto"
           >
             <button
               v-if="state === 'initialized'"
@@ -25,21 +25,25 @@
             </button>
             <div v-else class="w-full">
               <div v-show="state === 'completed'" class="mb-6 dark:text-white">
-                <p class="mb-4">
+                <p v-show="!newRecord" class="mb-4">
                   You finished in
                   <span class="text-secondary-500 font-bold">{{
                     time.pretty
                   }}</span>
                 </p>
                 <p>
-                  Your best time is
+                  <custom-transition mode="scale" speed="slow" delay>
+                    <span v-if="newRecord" class="text-3xl mb-4 block">
+                      New best time!
+                    </span>
+                  </custom-transition>
+                  <span v-if="!newRecord">Your best time is</span>
+                  <br />
                   <span class="text-primary-500 font-bold">{{
                     bestTime.pretty
                   }}</span>
                 </p>
-                <p class="font-light text-base block">
-                  Care to beat this time?
-                </p>
+                <p class="font-light text-base block">Can to beat this time?</p>
               </div>
               <p v-show="state === 'abandoned'" class="dark:text-white mb-2">
                 Try again?
@@ -123,11 +127,11 @@
         </custom-transition>
       </div>
     </div>
-    <button @click="fireworks()">Confetti</button>
   </div>
 </template>
 
 <script lang="ts" setup>
+document.title = 'Focus'
 import { computed, ref, watch } from 'vue'
 import { useTimer } from '@/useTimer'
 import CustomTransition from '@/components/CustomTransition.vue'
